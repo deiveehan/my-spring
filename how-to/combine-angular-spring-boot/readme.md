@@ -39,20 +39,6 @@ cd ..
 gradle init
 ```
 
-Add the following in settings.gradle in the root project
-#### fudo-app project changes
-fudo-app/settings.gradle
-
-```yaml
-include 'fudo-service', 'fudo-ui'
-```
-fudo-app/build.gradle
-```groovy
-allprojects {
-    group = 'cs.io'
-    version = '0.0.1-SNAPSHOT'
-}
-```
 
 Update build.gradle in fudo-ui with the following
 #### fudo-ui project changes
@@ -85,6 +71,22 @@ build.gradle (Add the following in dependencies section)
 ```groovy
 	implementation(project(':fudo-ui'))
 ```
+
+Add the following in settings.gradle in the root project
+#### fudo-app project changes
+fudo-app/settings.gradle
+
+```yaml
+include 'fudo-service', 'fudo-ui'
+```
+fudo-app/build.gradle
+```groovy
+allprojects {
+    group = 'cs.io'
+    version = '0.0.1-SNAPSHOT'
+}
+```
+
 
 ### Build the application..
 Run fodo-app/
